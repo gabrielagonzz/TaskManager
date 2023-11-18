@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Assigner</title>
+    <link rel="stylesheet" href="gestion.css">
+</head>
+
+<body>
+    <div class="header-container">
+        <div class="input-box">
+            <input type="text" id="searchKeyword" placeholder="Search for tasks...">
+        </div>
+        <div class="lupa">
+            <button onclick="searchTasks()">Search</button>
+        </div>
+        <div class="showAll">
+            <button class="success" onclick="showAllTasks()">Show All</button>
+        </div>
+    </div>
+
+    <div id="task-container1">
+        <div id="task-list">
+            <h2>Tasks</h2>
+            <table id="taskTable">
+                <thead>
+                    <tr>
+                        <th>Tasks</th>
+                        <th>Developer</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="tasks"></tbody>
+            </table>
+        </div>
+
+        <div id="task-container2">
+            <div class="input-box2">
+                <form id="createForm">
+                    <h2>Create new task</h2>
+                    <label for="newTaskName">Task name:</label>
+                    <input type="text" id="newTaskTitle" placeholder="Task Name">
+                    <textarea id="newTaskDescription" placeholder="Task Description"></textarea>
+                                        <div class="btn">
+                        <button type="button" class="success" onclick="createTask()">Create</button>
+                    </div>
+                </form>
+            </div>
+
+            <div id="editTaskModal" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeEditModal()">&times;</span>
+                    <h2>Edit Task</h2>
+                    <label for="editTaskTitle">Title:</label>
+                    <input type="text" id="editTaskTitle" required>
+                    <label for="editTaskDetails">Description:</label>
+                    <input type="text" id="editTaskDetails" required>
+                    <button type="button" onclick="saveTaskDetails()">Save Changes</button>
+                </div>
+            </div>
+            <div id="assignTaskModal" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeAssignModal()">&times;</span>
+                    <h2>Assign Task</h2>
+                    <label for="assignedUserId">User ID:</label>
+                    <input type="text" id="assignedUserId" placeholder="Enter User ID">
+                    <button onclick="assignTask()">Assign Task</button>
+                </div>
+            </div>
+            
+
+                <div id="detailsTaskModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close" onclick="closeDetailsModal()">&times;</span>
+                        <h2>Task Details:</h2>
+                        <p id="modalTaskDetails">...</p>
+                    </div>
+                </div>
+                
+    <script src="gestionLider.js"></script>
+</body>
+
+</html>

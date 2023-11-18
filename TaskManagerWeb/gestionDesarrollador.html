@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Assigner</title>
+    <link rel="stylesheet" href="gestion.css">
+</head>
+<body>
+    <div class="header-container">
+        <div class="input-box">
+            <input type="text" id="searchInput" placeholder="Search for tasks...">
+        </div>
+        <div class="lupa">
+            <button onclick="searchTasks()">Search</button>
+        </div>
+        <div class="showAll">
+            <button class="success" onclick="showAllTasks()">Show All</button>
+        </div>
+    </div>
+
+    <div id="task-container1">
+        <div id="task-list">
+            <h2>Tasks</h2>
+            <table id="taskTable">
+                <thead>
+                    <tr>
+                        <th>Tasks</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="tasks"></tbody>
+            </table>
+        </div>
+        </div>
+    </div>
+    <script src="gestionDesarrollador.js"></script>
+</body>
+</html>
